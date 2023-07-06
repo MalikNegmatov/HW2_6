@@ -21,14 +21,6 @@ public class Employee {
         return lastName;
     }
 
-//    @Override
-//    public String toString() {
-//        return "Employee{" +
-//                "firstName='" + firstName + '\'' +
-//                ", lastName='" + lastName + '\'' +
-//                '}';
-//    }
-
     @Override
     public String toString() {
         return String.format("%-15s%-15s", this.getFirstName(), this.getLastName());

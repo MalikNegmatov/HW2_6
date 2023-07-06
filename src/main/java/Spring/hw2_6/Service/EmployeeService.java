@@ -46,4 +46,8 @@ public class EmployeeService {
             throw new EmployeeNotFoundException("Сотрудник не найден в списке.");
         }
     }
+
+    public List<Employee> employeesList() {
+        return new ArrayList<>(employees);
+    }
 }
