@@ -1,5 +1,7 @@
 package Spring.hw2_6.Model;
 
+import java.util.Objects;
+
 public class Employee {
     private final String firstName;   // Имя
     private final String lastName;    // Фамилия
@@ -19,6 +21,14 @@ public class Employee {
         return lastName;
     }
 
+//    @Override
+//    public String toString() {
+//        return "Employee{" +
+//                "firstName='" + firstName + '\'' +
+//                ", lastName='" + lastName + '\'' +
+//                '}';
+//    }
+
     @Override
     public String toString() {
         return String.format("%-15s%-15s", this.getFirstName(), this.getLastName());
@@ -37,9 +47,7 @@ public class Employee {
 
     @Override
     public int hashCode() {
-        int result = firstName.hashCode();
-        result = 31 * result + lastName.hashCode();
-        return result;
+        return Objects.hash(firstName, lastName);
     }
 
     /**
